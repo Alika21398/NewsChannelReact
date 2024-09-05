@@ -23,9 +23,20 @@ function Header() {
     <>
       {/* toppest part */}
       <section className="container px-20 flex justify-between py-3">
+        <div className="flex gap-10 items-center">
         <h3 className="search">
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <Link to='/'>
+          <i class="fa-solid fa-magnifying-glass text-[20px] font-light  hover:text-[#30448b]"></i>
+          </Link>
         </h3>
+        <ul className="flex gap-3 text-[18px]">
+          <li><Link to='/'><i class="bi bi-facebook  hover:text-[#30448b]"></i></Link></li>
+          <li><Link to='/'><i class="bi bi-instagram  hover:text-[#30448b]"></i></Link></li>
+          <li><Link to='/'><i class="bi bi-twitter  hover:text-[#30448b]"></i></Link></li>
+          <li><Link to='/'><i class="bi bi-youtube  hover:text-[#30448b]"></i></Link></li>
+        </ul>
+        </div>
+     
         <div className="flex items-center gap-3">
           <h3>{formattedDate}</h3>
           <button onClick={() => setSwipe("slide")}>
