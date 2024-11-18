@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const Home = () => {
   const { cid } = useParams();
@@ -58,7 +59,9 @@ const Home = () => {
             return (
               <div className="flex gap-4 p-4 border-b" key={index}>
                 <div className="w-[45%] h-[170px] aspect-[4/3]">
-                  <Link to={`/details/${items.category[0]}/${items.article_id}`}>
+                  <Link
+                    to={`/details/${items.category[0]}/${items.article_id}`}
+                  >
                     <img
                       className="w-full h-full rounded-md"
                       src={items.image_url}
@@ -68,7 +71,9 @@ const Home = () => {
                 </div>
 
                 <div className="w-[45%] text-xl py-6 border-b font-medium">
-                  <Link to={`/details/${items.category[0]}/${items.article_id}`}>
+                  <Link
+                    to={`/details/${items.category[0]}/${items.article_id}`}
+                  >
                     {items.title}
                   </Link>
                 </div>
@@ -142,7 +147,9 @@ const Home = () => {
             {data.slice(0, 6).map((items, index) => {
               return (
                 <div className=" py-5" key={index}>
-                  <Link to={`/details/${items.category[0]}/${items.article_id}`}>
+                  <Link
+                    to={`/details/${items.category[0]}/${items.article_id}`}
+                  >
                     <div className="h-[170px]">
                       <img
                         className="w-full h-full rounded-md object-cover"

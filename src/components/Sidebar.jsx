@@ -3,7 +3,7 @@ import Logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 function Sidebar({ swipe, setSwipe }) {
-  console.log(swipe)
+  console.log(swipe);
   // const{swipe}=props;
   return (
     <>

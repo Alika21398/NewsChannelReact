@@ -80,20 +80,17 @@ function Details() {
                   key={index}
                   className=" flex justify-between border-b-2 py-3"
                 >
-                 
                   <div className="w-[50%]">
-                  <Link to={`/details/${cid}/${items.article_id}`}>
-                    <h2>{items?.title}</h2>
+                    <Link to={`/details/${cid}/${items.article_id}`}>
+                      <h2>{items?.title}</h2>
                     </Link>
                   </div>
-                 
-                 
+
                   <div className="w-[30%]">
-                  <Link to={`/details/${cid}/${items.article_id}`}>
-                    <img className="w-full" src={items?.image_url} alt="" />
+                    <Link to={`/details/${cid}/${items.article_id}`}>
+                      <img className="w-full" src={items?.image_url} alt="" />
                     </Link>
                   </div>
-                 
                 </div>
               );
             })}
@@ -111,7 +108,10 @@ function Details() {
             {Array.isArray(cdata) &&
               cdata?.slice(2, 6).map((items, index) => {
                 return (
-                  <div key={index} className="lg-w-[200px] lg-h-[300px]  overflow-hidden">
+                  <div
+                    key={index}
+                    className="lg-w-[200px] lg-h-[300px]  overflow-hidden"
+                  >
                     <Link to={`/details/${cid}/${items.article_id}`}>
                       <div className="w-full h-[250px]">
                         <img
